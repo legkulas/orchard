@@ -9,12 +9,12 @@
 ### The prerequisites are:
 
 -   Node
--   Git
+-   Github Account
 -   VSCode (Optional or use any IDE of your choice)
 
 Clone the repository and launch any terminal of your choosing.
 
-In the terminal, type **code .** to launch VS Code.
+In the terminal, type **code .** to launch VSCode.
 
 > code .
 
