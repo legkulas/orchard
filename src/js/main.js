@@ -11,7 +11,7 @@ function loadContent() {
         preloader.style.display = 'none';
         main.style.opacity = 1;
     }, 2000);
-
+ 
 }
 
 window.addEventListener('load', loadContent);
