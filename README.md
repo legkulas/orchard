@@ -16,11 +16,18 @@ Clone the repository and launch any terminal of your choosing.
 
 In the terminal, type **code .** to launch VS Code.
 
+> code .
+
 In the same terminal install all the dependencies by typing **npm install**.
+
+> npm install
 
 After the installation is complete run the following commands:
 
--   npm run build
--   npm start
+> npm run build
 
-A URL will be provided after the build tools and task runner is complete **http://localhost:3000/**
+> npm start
+
+A URL will be provided after the build tools and task runner is complete **http://localhost:3000/**.
+
+Open the URL on your browser.
