@@ -8,9 +8,9 @@
 
 ### The prerequisites are:
 
--   Node
--   Git
--   VSCode (Optional or use any IDE of your choice)
+-   Node JS | [Node JS Download](https://nodejs.org/en/download)
+-   GitHub Account | [Github Signup](https://github.com/join)
+-   VSCode (Optional or use any IDE of your choice) | [Download VSCode](https://code.visualstudio.com/download) 
 
 Clone the repository and launch any terminal of your choosing.
 
