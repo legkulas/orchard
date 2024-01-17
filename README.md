@@ -12,7 +12,13 @@
 -   GitHub Account | [Github Signup](https://github.com/join)
 -   VSCode (Optional or use any IDE of your choice) | [Download VSCode](https://code.visualstudio.com/download) 
 
-Clone the repository and launch any terminal of your choosing.
+Login with your GitHub account and copy the repository link
+
+> git@github.com:legkulas/orchard.git
+
+Open your terminal and clone the repository.
+
+> git clone git@github.com:legkulas/orchard.git
 
 In the terminal, type **code .** to launch VS Code.
 
@@ -28,6 +34,6 @@ After the installation is complete run the following commands:
 
 > npm start
 
-A URL will be provided after the build tools and task runner is complete **http://localhost:3000/**.
+A URL will be provided after the build tools and task runner are complete **http://localhost:3000/**.
 
 Open the URL on your browser.
