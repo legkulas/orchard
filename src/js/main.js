@@ -14,25 +14,6 @@ function loadContent() {
 
 window.addEventListener('load', loadContent);
 
-import fatherAndSon from '../images/Image-01.jpg';
-import fatherAndSon2x from '../images/Image-01@2x.jpg';
-import vegetables from '../images/Image-02.jpg';
-import vegetables2x from '../images/Image-02@2x.jpg';
-import asparagus from '../images/Image-03.jpg';
-import asparagus2x from '../images/Image-03@2x.jpg';
-import summerLunch from '../images/Image-04.jpg';
-import summerLunch2x from '../images/Image-04@2x.jpg';
-import traditionalChristmas from '../images/Image-05.jpg';
-import traditionalChristmas2x from '../images/Image-05@2x.jpg';
-import takingTaste from '../images/Image-06.jpg';
-import takingTaste2x from '../images/Image-06@2x.jpg';
-
-// favicon
-import appleTouchIcon from '../images/apple-touch-icon.png';
-import favicon16 from '../images/favicon-16x16.png';
-import favicon32 from '../images/favicon-32x32.png';
-import favicon from '../images/favicon.ico';
-
 const myModal = bootstrap.Modal.getOrCreateInstance('#myModal');
 
 window.addEventListener('DOMContentLoaded', () => {
