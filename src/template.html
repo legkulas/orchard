@@ -21,22 +21,22 @@
             <div class="row">
                 <div class="col-md-4">
                   <figure>
-                    <img class="normal-image bg-pan-tr img-fluid w-100" id="father-and-son" alt="father-and-son" src="images/Image-01.jpg">
-                    <img class="retina-image bg-pan-tr img-fluid w-100" id="father-and-son" alt="father-and-son" src="images/Image-01@2x.jpg">
+                    <img class="normal-image bg-pan-tr img-fluid w-100" id="father-and-son" alt="father-and-son" data-title="fatherAndSon" src="images/Image-01.jpg">
+                    <img class="retina-image bg-pan-tr img-fluid w-100" id="father-and-son" alt="father-and-son" data-title="fatherAndSon2x" src="images/Image-01@2x.jpg">
                   </figure>
                 </div>
                 <div class="col-md-4">
                   <div class="col-lg-12">
                     <figure>
-                      <img class="normal-image bg-pan-tr img-fluid w-100" id="vegetables" alt="vegetables" src="images/Image-02.jpg">
-                      <img class="retina-image bg-pan-tr img-fluid w-100" id="vegetables" alt="vegetables" src="images/Image-02@2x.jpg">
+                      <img class="normal-image bg-pan-tr img-fluid w-100" id="vegetables" alt="vegetables" data-title="vegetables" src="images/Image-02.jpg">
+                      <img class="retina-image bg-pan-tr img-fluid w-100" id="vegetables" alt="vegetables" data-title="vegetables2x" src="images/Image-02@2x.jpg">
                     </figure>
                   </div>
 
                   <div class="col-lg-12">
                     <figure>
-                      <img class="normal-image bg-pan-tr img-fluid w-100" id="asparagus" alt="asparagus" src="images/Image-03.jpg">
-                      <img class="retina-image bg-pan-tr img-fluid w-100" id="asparagus" alt="asparagus" src="images/Image-03@2x.jpg">
+                      <img class="normal-image bg-pan-tr img-fluid w-100" id="asparagus" alt="asparagus" data-title="asparagus" src="images/Image-03.jpg">
+                      <img class="retina-image bg-pan-tr img-fluid w-100" id="asparagus" alt="asparagus" data-title="asparagus2x" src="images/Image-03@2x.jpg">
                     </figure>
                   </div>
                 </div>
@@ -61,8 +61,8 @@
             <div class="col-md-4">
               <div class="card mx-auto">
                 <figure>
-                  <img src="images/Image-04.jpg" class="normal-image bg-pan-tr card-img-top " alt="summer-lunch-menu" data-toggle="open">
-                  <img src="images/Image-04@2x.jpg" class="retina-image bg-pan-tr card-img-top " alt="summer-lunch-menu" data-toggle="open">
+                  <img src="images/Image-04.jpg" class="img-btn normal-image bg-pan-tr card-img-top " alt="summer-lunch-menu" data-title="Summer Lunch Menu By Mark Best" data-toggle="open">
+                  <img src="images/Image-04@2x.jpg" class="img-btn retina-image bg-pan-tr card-img-top " alt="summer-lunch-menu" data-title="Summer Lunch Menu By Mark Best" data-toggle="open">
                   <span class="red-underline"></span>
                 </figure>
                 <div class="card-body">
@@ -76,8 +76,8 @@
             <div class="col-md-4">
               <div class="card mx-auto">
                 <figure>
-                  <img src="images/Image-05.jpg" class="normal-image bg-pan-tr card-img-top" alt="traditional-christmas-eve" data-toggle="open">
-                  <img src="images/Image-05.jpg" class="retina-image bg-pan-tr card-img-top" alt="traditional-christmas-eve" data-toggle="open">
+                  <img src="images/Image-05.jpg" class="img-btn normal-image bg-pan-tr card-img-top" alt="traditional-christmas-eve" data-title="A Traditional Christmas Eve, Mark Best Style" data-toggle="open">
+                  <img src="images/Image-05.jpg" class="img-btn retina-image bg-pan-tr card-img-top" alt="traditional-christmas-eve" data-title="A Traditional Christmas Eve, Mark Best Style" data-toggle="open">
                   <span class="red-underline"></span>
                 </figure>
                 <div class="card-body">
@@ -91,8 +91,8 @@
             <div class="col-md-4">
               <div class="card mx-auto">
                 <figure>
-                  <img src="images/Image-06.jpg" class="normal-image bg-pan-tr card-img-top" alt="taking-taste-further" data-toggle="open">
-                  <img src="images/Image-06.jpg" class="retina-image bg-pan-tr card-img-top" alt="taking-taste-further" data-toggle="open">
+                  <img src="images/Image-06.jpg" class="img-btn normal-image bg-pan-tr card-img-top" alt="taking-taste-further" data-title="Taking Taste Further" data-toggle="open">
+                  <img src="images/Image-06.jpg" class="img-btn retina-image bg-pan-tr card-img-top" alt="taking-taste-further" data-title="Taking Taste Further" data-toggle="open">
                   <span class="red-underline"></span>
                 </figure>
                 <div class="card-body">
@@ -112,11 +112,14 @@
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-body">
-            <p>Congrationlation you've open the modal!</p>
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal-title"></h5>
+			</div>
+			<div class="modal-body">
+			<img alt="Modal Image" id="modal-image" class="img-fluid d-flex mx-auto">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
