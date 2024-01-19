@@ -1,48 +1,42 @@
-'use strict';
-
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
+
+const mode = process.env.NODE_ENV || 'development';
+// Temporary workaround for 'browserslist' bug that is being patched in the near future
+const target = process.env.NODE_ENV === 'production' ? 'browserslist' : 'web';
 
 module.exports = {
-    mode: 'development',
+    // mode defaults to 'production' if not set
+    mode: mode,
+
+    // entry not required if using `src/index.js` default
     entry: {
-        bundle: path.resolve(__dirname, './src/js/main.js'),
-        hot: 'webpack/hot/dev-server.js',
-        client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
+        bundle: path.resolve(__dirname, './src/index.js'),
     },
+
+    // output not required if using `dist/main.js` default
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name][contenthash].js',
         clean: true,
-        assetModuleFilename: '[name][ext]',
+        assetModuleFilename: 'images/[name][ext]',
     },
-    devtool: 'source-map',
-    devServer: {
-        static: {
-            directory: path.resolve(__dirname, 'dist'),
-        },
-        magicHtml: true,
-        port: 3000,
-        hot: false,
-        client: false,
-        compress: true,
-        historyApiFallback: true,
-    },
-    plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Orchard FED Test',
+            filename: 'index.html',
+            template: 'src/template.html',
+        }),
+        new MiniCssExtractPlugin(),
+    ],
+
     module: {
         rules: [
             {
-                mimetype: 'image/svg+xml',
-                scheme: 'data',
-                type: 'asset/resource',
-                generator: {
-                    filename: 'icons/[hash].svg',
-                },
-            },
-            {
-                test: /\.(scss)$/,
+                test: /\.(s[ac]|c)ss$/i,
                 use: [
                     {
                         loader: 'style-loader',
@@ -76,24 +70,20 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
                 type: 'asset/resource',
-                // use: [
-                //     {
-                //         loader: 'file-loader',
-                //         options: {
-                //             name: '[name].[ext]',
-                //             outputPath: 'images/',
-                //         },
-                //     },
-                // ],
             },
         ],
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Orchard FED Test',
-            filename: 'index.html',
-            template: 'src/template.html',
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-    ],
+
+    // defaults to "web", so only required for webpack-dev-server bug
+    target: target,
+    devtool: 'source-map',
+
+    // required if using webpack-dev-server
+    devServer: {
+        contentBase: './dist',
+        port: 3000,
+        hot: false,
+        compress: true,
+        historyApiFallback: true,
+    },
 };
