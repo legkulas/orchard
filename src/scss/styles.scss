@@ -63,7 +63,6 @@ p {
         width: 95px;
         display: inline-block;
         
-
         &:hover {
             -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	            animation: heartbeat 1.5s ease-in-out infinite both;
@@ -75,6 +74,10 @@ p {
             margin-top: 4px;
         }
     }
+}
+
+.modal {
+    color: $text-color;
 }
 
 .retina-image { display: none; }
