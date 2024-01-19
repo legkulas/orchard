@@ -1,28 +1,27 @@
-'use strict'
+'use strict';
 
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require("webpack");
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
     entry: {
         bundle: path.resolve(__dirname, './src/js/main.js'),
-        // Runtime code for hot module replacement
-      hot: 'webpack/hot/dev-server.js',
-      // Dev server client for web socket transport, hot and live reload logic
-      client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
+        hot: 'webpack/hot/dev-server.js',
+        client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name][contenthash].js',
         clean: true,
+        assetModuleFilename: '[name][ext]',
     },
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'dist')
+            directory: path.resolve(__dirname, 'dist'),
         },
         magicHtml: true,
         port: 3000,
@@ -31,9 +30,7 @@ module.exports = {
         compress: true,
         historyApiFallback: true,
     },
-    plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' })
-    ],
+    plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
     module: {
         rules: [
             {
@@ -41,30 +38,30 @@ module.exports = {
                 scheme: 'data',
                 type: 'asset/resource',
                 generator: {
-                    filename: 'icons/[hash].svg'
-                }
+                    filename: 'icons/[hash].svg',
+                },
             },
             {
                 test: /\.(scss)$/,
                 use: [
                     {
-                        loader: 'style-loader'
+                        loader: 'style-loader',
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
                     },
                     {
                         loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
-                                plugins: [autoprefixer]
-                            }
-                        }
+                                plugins: [autoprefixer],
+                            },
+                        },
                     },
                     {
-                        loader: 'sass-loader'
-                    }
-                ]
+                        loader: 'sass-loader',
+                    },
+                ],
             },
             {
                 test: /\.js$/,
@@ -72,24 +69,24 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env']
+                        presets: ['@babel/preset-env'],
                     },
-                }
+                },
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
-                // type: 'asset/resource',
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'images/',
-                        },
-                    },
-                ],
+                type: 'asset/resource',
+                // use: [
+                //     {
+                //         loader: 'file-loader',
+                //         options: {
+                //             name: '[name].[ext]',
+                //             outputPath: 'images/',
+                //         },
+                //     },
+                // ],
             },
-        ]
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -99,4 +96,4 @@ module.exports = {
         }),
         new webpack.HotModuleReplacementPlugin(),
     ],
-}
+};
