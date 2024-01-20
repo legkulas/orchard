@@ -10,7 +10,7 @@
 
 -   Node JS | [Node JS Download](https://nodejs.org/en/download)
 -   GitHub Account | [Github Signup](https://github.com/join)
--   VSCode (Optional or use any IDE of your choice) | [Download VSCode](https://code.visualstudio.com/download) 
+-   VSCode (Optional or use any IDE of your choice) | [Download VSCode](https://code.visualstudio.com/download)
 
 Login with your GitHub account and copy the repository link
 
@@ -30,7 +30,7 @@ In the same terminal install all the dependencies by typing **npm install**.
 
 After the installation is complete run the following commands:
 
-> npm run build
+> npm run build-dev
 
 > npm start
 
